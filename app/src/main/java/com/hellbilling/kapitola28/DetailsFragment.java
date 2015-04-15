@@ -22,13 +22,17 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 
 public class DetailsFragment extends Fragment {
+    // toto musi kazdy fragment obsahovat, definuje to layout
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 														Bundle savedInstanceState) {
+        // Layout je WebView
 		return(inflater.inflate(R.layout.details_fragment, container, false));
 	}
-	
+
+    // dava url do WebView
 	public void loadUrl(String url) {
+        // getView nacita zobrazenie, najde v nom browser a ten zavola loadUrl
 		((WebView)(getView().findViewById(R.id.browser))).loadUrl(url);
 	}
 }
